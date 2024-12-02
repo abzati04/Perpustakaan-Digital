@@ -38,29 +38,6 @@
 	</li>
 
 <!-- Heading -->
-	<div class="sidebar-heading">
-		Laporan
-	</div>
-
-
-	<li class="nav-item">
-		<a class="nav-link" href="laporan-harian.php">
-			<i class="fas fa-fw fa-clock"></i>
-		<span>Laporan Data Anggota</span></a>
-	</li>
-
-	<li class="nav-item">
-		<a class="nav-link" href="laporan-bulanan.php">
-			<i class="fas fa-fw fa-clock"></i>
-		<span>Laporan Data Buku</span></a>
-	</li>
-
-	<li class="nav-item">
-		<a class="nav-link" href="laporan-tahunan.php">
-			<i class="fas fa-fw fa-clock"></i>
-		<span>Tahunan</span></a>
-	</li>
-	
 <!--Divider-->
 	<hr sidebar-divider>
 

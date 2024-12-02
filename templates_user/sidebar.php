@@ -22,20 +22,6 @@
             <span>Data Buku</span></a>
     </li>
 
-    <!-- Nav Item - Peminjaman -->
-    <li class="nav-item">
-        <a class="nav-link" href="pinjambuku_user.php">
-            <i class="fas fa-fw fa-plus-circle"></i>
-            <span>Pinjam Buku</span></a>
-    </li>
-
-    <!-- Nav Item - Pengembalian -->
-    <li class="nav-item">
-        <a class="nav-link" href="kembalikanbuku_user.php">
-            <i class="fas fa-fw fa-undo"></i>
-            <span>Kembalikan Buku</span></a>
-    </li>
-
     <!-- Divider -->
     <hr class="sidebar-divider d-none d-md-block">
 </ul>
