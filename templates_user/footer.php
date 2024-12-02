@@ -59,7 +59,7 @@
 
 				include 'db/koneksi.php';
 				$no=1;
-				$nama=mysqli_query($db, "select * from anggotar");
+				$nama=mysqli_query($db, "select * from anggota");
 				while($n = mysqli_fetch_array($nama)) {
 			?>
 
@@ -69,7 +69,7 @@
 			?>
 	</div>
 	<div class="modal-footer">
-		<button type="button" class="btn btn-outline-primary" data dismiss="modal" >Close</button>
+		<button type="button" class="btn btn-outline-primary" data dismiss="modal">Kembali</button>
 	</div>
 
 </div>

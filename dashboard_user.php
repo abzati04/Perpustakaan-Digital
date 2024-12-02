@@ -101,25 +101,33 @@ if (!isset($_SESSION['nim'])) {
                             <th>Judul</th>
                             <th>Tanggal Pinjam</th>
                             <th>Status</th>
+                            <th>Action</th>
                         </tr>
                     </thead>
                     <tbody align="center">
-                        <?php
-                        // Mengambil data peminjaman berdasarkan NIM pengguna yang sedang login
-                        $dataa = mysqli_query($db, "SELECT b.judul, p.tanggalpinjam, p.status 
-                                                     FROM pinjam p 
-                                                     JOIN buku b ON p.idbuku = b.idbuku 
-                                                     WHERE p.nim = '$nim' AND p.status = 'Dipinjam'");
-                        $no = 1;
-                        while ($d = mysqli_fetch_array($dataa)) {
-                            echo "<tr>";
-                            echo "<td>" . $d['judul'] . "</td>";
-                            echo "<td>" . $d['tanggalpinjam'] . "</td>";
-                            echo "<td>" . $d['status'] . "</td>";
-                            echo "</tr>";
-                        }
-                        ?>
-                    </tbody>
+    <?php
+    // Mengambil data peminjaman berdasarkan NIM pengguna yang sedang login
+    $dataa = mysqli_query($db, "SELECT b.judul, p.tanggalpinjam, p.status, p.idbuku 
+                                 FROM pinjam p 
+                                 JOIN buku b ON p.idbuku = b.idbuku 
+                                 WHERE p.nim = '$nim' AND p.status = 'Dipinjam'");
+    while ($d = mysqli_fetch_array($dataa)) {
+        echo "<tr>";
+        echo "<td>" . $d['judul'] . "</td>";
+        echo "<td>" . $d['tanggalpinjam'] . "</td>";
+        echo "<td>" . $d['status'] . "</td>";
+        echo "<td>
+                <form action='kembalikanbuku_user.php' method='POST'>
+                    <input type='hidden' name='idbuku' value='".$d['idbuku']."'>
+                    <input type='hidden' name='nim' value='$nim'>
+                    <button type='submit' class='btn btn-danger'>Kembalikan</button>
+                </form>
+            </td>";
+        echo "</tr>";
+    }
+    ?>
+</tbody>
+
                 </table>
             </div>
         </div>
