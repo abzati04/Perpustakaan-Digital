@@ -68,9 +68,9 @@
 				}
 			?>
 	</div>
-	<div class="modal-footer">
+	<!-- <div class="modal-footer">
 		<button type="button" class="btn btn-outline-primary" data dismiss="modal">Kembali</button>
-	</div>
+	</div> -->
 
 </div>
 

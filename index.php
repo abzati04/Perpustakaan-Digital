@@ -98,13 +98,11 @@
 						<div class="col mr-2">
 							<div class="text-xs font-weight-bold text-warning text-uppercase mb-1">Jumlah Buku Dipinjam</div>
 							<?php
-								include('db/koneksi.php');
-								$data = mysqli_query($db,"SELECT * from pinjam WHERE status='Dipinjam'");
-								$data1 = mysqli_query($db,"SELECT * from pinjam WHERE status='Dikembalikan'");
-								$d = $d=mysqli_num_rows($data);
-								$d2 = $d2 = mysqli_num_rows($data1);
-								$total = $d - $d2;
-							?>
+                        // menghitung jumlah peminjam
+                        $data = mysqli_query($db, "SELECT COUNT(*) as total FROM pinjam WHERE status='Dipinjam'");
+                        $row = mysqli_fetch_assoc($data);
+                        $total = $row['total'];
+                    ?>
 							<div class="h5 mb-0 font-weight-bold text-gray-800"><?php echo $total;?></div>
 								
 						</div>
